@@ -27,7 +27,7 @@ function LocationPage() {
   }
   return (
     <Container>
-      {data?.results.map(location => <LocationItem location={location} />)}
+      {data?.results.map(location => <LocationItem key={location.id} location={location} />)}
     </Container>
   );
 }
@@ -38,8 +38,6 @@ const Container = styled.div`
 /* border: 1px solid red; */
 
   display: flex;
-  /* align-items: center; */
   flex-wrap: wrap;
   gap: 15px;
-  /* border: 1px solid red; */
 `;

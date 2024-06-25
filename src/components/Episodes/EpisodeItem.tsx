@@ -1,25 +1,24 @@
 import styled from 'styled-components';
-import { IPlanet } from '../../types/location';
+import { IEpisode } from '../../types/location';
 import { Block } from '../shared/styled_UI';
 
 interface Props {
-  location: IPlanet
+  episode: IEpisode
 }
 
-
-function LocationItem({ location }: Props) {
+function EpisodeItem({ episode }: Props) {
   return (
     <Container>
-      <CardTitle>{location.name}</CardTitle>
-      <CardText>{location.dimension}</CardText>
+      <CardTitle>{episode.name}</CardTitle>
+      <CardText>{episode.episode}</CardText>
       <Block justifyC>
-        <CardText>{location.type}</CardText>
+        <CardText>{episode.air_date}</CardText>
       </Block>
     </Container>
   );
 }
 
-export default LocationItem;
+export default EpisodeItem;
 
 const Container = styled.div`
   min-width: 300px;

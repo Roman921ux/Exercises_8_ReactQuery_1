@@ -16,6 +16,6 @@ function Main({ children }: Props) {
 export default Main;
 
 const Container = styled.div`
-border: 1px solid blue;
+/* border: 1px solid blue; */
   padding: 30px;
 `;
